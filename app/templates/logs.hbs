@@ -1,0 +1,43 @@
+<div id="logsPage" class="pageContainer fade-in">
+
+  <!-- Header -->
+  <div id="logsHeader" class="pageHeader">
+    <span>Logs</span>
+    <div class="filterItem" style="padding-top: 0 !important; padding-bottom: 4px;">
+      <!-- Logs filter, passed filters and default value -->
+      {{filter-dropdown-component  filters=logFilters selected=currentFilter}}
+    </div>
+  </div>
+
+  <!-- Logs table heading row -->
+  <table id="logsTable">
+    <tr>
+      <td id="logLevel">Level</td>
+      <td id="logDate">Date and time</td>
+      <td id="logMessage">Message</td>
+      <td id="logAction">Action</td>
+    </tr>
+  </table>
+
+  <!-- Loop through fetched logs -->
+  {{#each model as |log|}}
+    <!-- Set data for component and bind selected log and selected message properties to appropriate controller properties -->
+    {{log-component item=log selectedLog=selectedLogToDelete selectedMessage=selectedMessageToSend}}
+  {{/each}}
+
+</div>
+
+<!-- Set email dialog component and set closure function for sending email from controller -->
+<div id="emailDialogWrapper" class="dialogWrapper">
+  {{send-email-dialog callSendEmail=(action 'sendEmail')}}
+</div>
+
+<!-- Set confirmation dialog component and set closure function for deleting log from controller -->
+<div id="confirmationDialog" class="dialogWrapper confirmationDialog">
+  {{confirmation-dialog-component item='log' callDelete=(action 'deleteLog')}}
+</div>
+
+<!-- Set overlay element -->
+<div id="dialogOverlay" {{action 'closeDialog'}}></div>
+
+{{outlet}}

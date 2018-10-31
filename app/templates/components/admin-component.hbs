@@ -1,0 +1,18 @@
+<table class="adminComponentTable">
+
+  <!-- Set component values -->
+  <tr class="adminsInTable">
+    <td class="name">{{set-admin-name item.name}}</td>
+    <td class="email">{{item.email}}</td>
+    <td class="scope">{{item.scope}}</td>
+    <td class="state" style="color: {{color-admin-state item.status}};">{{item.status}}</td>
+    <td class="action">
+      <!-- Set icons and their on-click actions -->
+      <img id="{{item.id}}" src="assets/icons/pencil2.svg" {{action 'openEditDialog' item.id item.email item.scope}}/>
+      <img id="{{item.id}}" src="assets/icons/delete.svg" {{action 'openConfirmationDialog' item.id}}/>
+    </td>
+  </tr>
+
+</table>
+
+{{yield}}

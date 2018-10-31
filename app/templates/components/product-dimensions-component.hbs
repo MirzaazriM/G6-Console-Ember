@@ -1,0 +1,58 @@
+
+<div id="dimensionsContainer">
+  <p>*PACKAGE DIMENSIONS</p>
+
+  <div id="dimensionsTables">
+
+    <table>
+
+      <tr>
+        <td>Weight: </td>
+        <td>
+          <input id="weightInput" type="number" class="dimensionsInput" value={{item.sku_weight}} placeholder="Ounces"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Height:</td>
+        <td>
+          <input  id="heightInput" type="number" class="dimensionsInput" value={{item.sku_height}} placeholder="Inches"/>
+        </td>
+      </tr>
+
+    </table>
+
+    <table>
+
+      <tr>
+        <td>Length:</td>
+        <td>
+          <input  id="lengthInput" type="number" class="dimensionsInput" value={{item.sku_length}} placeholder="Inches"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Width: </td>
+        <td><input  id="widthInput" type="number" class="dimensionsInput" value={{item.sku_width}} placeholder="Inches"/></td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <br/>
+
+  <p>*NUMBER OF PRODUCTS</p>
+
+  <table>
+    <tr>
+      <td>Quantity: </td>
+      <td><input  id="quantityInput" type="number" class="dimensionsInput" value={{item.sku_quantity}} placeholder="Number"/></td>
+    </tr>
+  </table>
+
+  <br/>
+
+</div>
+
+{{yield}}

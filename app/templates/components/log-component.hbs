@@ -1,0 +1,18 @@
+<table class="componentTable">
+
+  <!-- Set log values-->
+  <tr class="logsInTable">
+    <td class="level">{{item.level}}</td>
+    <td class="date">{{item.date}}</td>
+    <td class="message"><div>{{item.message}}</div></td>
+    <td class="action">
+      <!-- Open appropriate dialog on click -->
+      <img src="assets/icons/email.svg" {{action 'openEmailDialog' item.message}}/>
+      <img src="assets/icons/delete.svg" {{action 'openConfirmationDialog' item.date}}/>
+    </td>
+  </tr>
+
+</table>
+
+
+{{yield}}

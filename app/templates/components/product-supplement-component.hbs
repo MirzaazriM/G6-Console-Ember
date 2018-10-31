@@ -1,0 +1,27 @@
+
+{{#if showEdit}}
+  {{#link-to page item.id}}
+    <div class="productContainer" {{action 'setSharedSupplementId' item.id}}>
+
+      <!-- Set first image in images array as product/supplement image -->
+      <img class="productImage" src="{{get-array-item item.images}}"/>
+      <p>{{item.name}}</p>
+
+      <!-- Set this container edit icon hidden or not (hidden at dashboard page) -->
+
+    </div>
+  {{/link-to}}
+
+{{else}}
+
+  <div class="productContainer" {{action 'setSharedSupplementId' item.id}}>
+
+    <!-- Set first image in images array as product/supplement image -->
+    <img class="productImage" src="{{get-array-item item.images}}"/>
+    <p>{{item.name}}</p>
+
+  </div>
+
+{{/if}}
+
+{{yield}}

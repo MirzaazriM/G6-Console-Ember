@@ -1,0 +1,30 @@
+
+<div id="progressBar"></div>
+
+<!-- Header -->
+{{header-component currentPage=currentRoute dropdownState=isUserDropdownOpened}}
+
+<!-- Input file element - browse window can be only called within the application.hbs -->
+<input id="inputFileElement" onchange={{action 'loadFile'}} type="file" multiple>
+
+<div {{action 'closeUserDropdownIfOpened'}}>
+<!-- Menu -->
+{{#menu-component menuItemSelected=currentRoute}}{{/menu-component}}
+
+<!-- Log in box -->
+{{login-box-component}}
+
+<!-- Page to load-->
+<div id="outletWrapper">
+  {{outlet}}
+</div>
+
+
+<!-- Toast -->
+{{toast-component toastText=textForToast}}
+
+<!-- Menu overlay -->
+<div id="menuOverlay" {{action 'closeOverlayAndMenu'}}></div>
+
+</div>
+

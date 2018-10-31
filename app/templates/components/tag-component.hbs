@@ -1,0 +1,9 @@
+
+<!-- Set component values -->
+<div class="tagComponent">
+  <span>{{item.name}}</span>
+  <!-- Open confirmation dialog on click -->
+  <img id="{{item.id}}" src="assets/icons/delete.svg" {{action 'openConfirmationDialog' item.id}}/>
+</div>
+
+{{yield}}

@@ -1,0 +1,27 @@
+<div id="loginBoxDialogOverlay"></div>
+
+<div id="loginBox">
+  <img src="assets/pictures/login_image.jpg" />
+
+  <div id="loginBoxText">
+    <p>G6-Sports Shop</p>
+    <p>Admin Console</p>
+  </div>
+
+  <div id="loginButtonsContainer">
+    <!--<div id="facebookLoginButton" class="loginButton" {{action 'logIn'}}>-->
+      <!--<img class="loginButtonIcons" src="assets/icons/facebook.svg" /><span>Log in with Facebook</span>-->
+    <!--</div>-->
+    <!--<div id="googleLoginButton" class="loginButton" {{action 'logIn'}}>-->
+      <!--<img class="loginButtonIcons" src="assets/icons/google.svg" /><span>Log in with Google</span>-->
+    <!--</div>-->
+
+    <div id="demoLogin">
+      <input id="username" type="text" placeholder="Username"/>
+      <input id="password" type="password" placeholder="Password"/>
+      <p id="demoLoginButton" {{action 'logIn'}}>Log in</p>
+    </div>
+  </div>
+</div>
+
+{{yield}}

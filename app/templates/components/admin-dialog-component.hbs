@@ -1,0 +1,29 @@
+
+<div id="adminDialogContainer">
+
+  <!-- Heading -->
+  <p class="dialogHeading">{{dialogHeading}} Admin</p>
+  <div id="adminDialogInputs">
+      <!-- Admin email input - bind value to enteredEmail -->
+      {{#if adminEditing}}
+        {{input id="adminEmailInput" value=enteredEmail placeholder='myemail@gmail.com'}}
+      {{else}}
+        {{input id="adminEmailInput" value=enteredEmail disabled="true" placeholder='myemail@gmail.com'}}
+      {{/if}}
+
+    <!-- Set filter component and its properties -->
+    <div id="scopeContainer" class="filterItem">
+      {{filter-dropdown-component filters=adminFilters selected=selectedScope}}
+    </div>
+
+  </div>
+
+  <!-- Set dialog buttons and their on-click actions -->
+  <div class="dialogButtonContainer">
+    <p class="cancelButton" {{action 'closeDialog'}}>Cancel</p>
+    <p class="addButton" {{action 'addEditAdmin'}}>{{dialogHeading}}</p>
+  </div>
+
+</div>
+
+{{yield}}

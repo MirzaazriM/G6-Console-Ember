@@ -1,0 +1,17 @@
+<table id="purchasedProductTable" {{action 'openDetailsDialog' item.id}}>
+
+  <!-- Set purchase data -->
+  <tr class="purchasedInTable">
+    <td class="productName purchasesTableItem">{{item.order_id}}</td>
+    <td class="productDate purchasesTableItem">{{item.date}}</td>
+    <!--<td class="productQuantity purchasesTableItem">{{!item.quantity}}</td>-->
+    <td class="productLocation purchasesTableItem">{{item.location}}</td>
+    <!-- Set class according to item.status value -->
+    <!--<td class="productStatus purchasesTableItem {{!if item.status "newClass"}}">{{!item.status}}</td>-->
+    <!-- Set class according to item.status value -->                                      <!-- Use helper to set shipped state -->
+    <td class="productAction purchasesTableItem "><span style="background-color: {{set-shipped-element-color item.shipped}}; width: 90px; text-align: center;">{{shipped-state-setter item.shipped}}</span></td>
+  </tr>
+
+</table>
+
+{{yield}}

@@ -1,0 +1,625 @@
+
+<!-- Loader spinner object -->
+<!--<div id="loaderWrapper">-->
+  <!--<div class="loader"></div>-->
+<!--</div>-->
+
+
+<!-- Set products and supplements pages loaders -->
+{{#if productSupplements}}
+
+  <div class="pageContainer">
+
+    <!-- Set page header-->
+    <div class="pageHeader">
+      <span class="skeletonLoaderParagraph" style="height: 35px; width: 120px;"></span>
+    </div>
+
+
+    <div id="productsDataContainer">
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+      <div class="productContainer">
+
+        <!-- Set first image in images array as product/supplement image -->
+        <div class="productImage skeletonLoaderProduct"></div>
+        <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Set tags loader-->
+{{else if tags}}
+
+  <div id="tagsPage" class="pageContainer">
+
+    <!-- Set header -->
+    <div class="pageHeader">
+      <span class="skeletonLoaderParagraph"></span>
+    </div>
+
+    <!-- Set table heading -->
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+    <div id="tagsTableHeading" class="tagComponent">
+      <span class="skeletonLoaderParagraph"></span>
+      <span class="skeletonLoaderIcon"></span>
+    </div>
+
+  </div>
+
+
+  <!-- Loader for purchases page-->
+  {{else if purchases}}
+
+
+  <div class="pageContainer">
+
+    <!-- Page tabs -->
+    <div id="purchasesTabContainer">
+      <!-- On click change tab view -->
+      <p  class="skeletonLoaderParagraph"></p>
+      <p id="sellingStatisticsTab" class="skeletonLoaderParagraph"></p>
+    </div>
+
+    <!-- Products tab -->
+    <div id="productsTabContainer">
+      <!-- Products tab heading -->
+      <!--<table id="productsTable">-->
+        <!--<tr>-->
+          <!--<td id="productName" class="skeletonLoaderParagraph"></td>-->
+          <!--<td id="productOrdered" class="skeletonLoaderParagraph"></td>-->
+          <!--<td id="productLocation" class="skeletonLoaderParagraph"></td>-->
+          <!--<td id="productAction" class="skeletonLoaderParagraph"></td>-->
+        <!--</tr>-->
+      <!--</table>-->
+
+      <table id="purchasedProductTable">
+
+        <!-- Set purchase data -->
+        <tr class="purchasedInTable">
+          <td class="productName purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productDate purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productLocation purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productAction purchasesTableItem skeletonLoaderParagraph"></td>
+        </tr>
+
+        <tr class="purchasedInTable">
+          <td class="productName purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productDate purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productLocation purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productAction purchasesTableItem skeletonLoaderParagraph"></td>
+        </tr>
+
+        <tr class="purchasedInTable">
+          <td class="productName purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productDate purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productLocation purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productAction purchasesTableItem skeletonLoaderParagraph"></td>
+        </tr>
+
+        <tr class="purchasedInTable">
+          <td class="productName purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productDate purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productLocation purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productAction purchasesTableItem skeletonLoaderParagraph"></td>
+        </tr>
+
+        <tr class="purchasedInTable">
+          <td class="productName purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productDate purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productLocation purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productAction purchasesTableItem skeletonLoaderParagraph"></td>
+        </tr>
+
+        <tr class="purchasedInTable">
+          <td class="productName purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productDate purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productLocation purchasesTableItem skeletonLoaderParagraph"></td>
+          <td class="productAction purchasesTableItem skeletonLoaderParagraph"></td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+
+  <!-- Loader for logs page-->
+  {{else if logs}}
+
+  <div id="logsPage" class="pageContainer">
+
+    <!-- Header -->
+    <div id="logsHeader" class="pageHeader">
+      <span class="skeletonLoaderParagraph"></span>
+      <div class="skeletonLoaderParagraph">
+      </div>
+    </div>
+
+    <table class="componentTable">
+
+      <tr style="height: 100px;">
+        <td class="level skeletonLoaderTdLogs"></td>
+        <td class="date skeletonLoaderTdLogs"></td>
+        <td class="message skeletonLoaderTdLogs"></td>
+        <td class="level skeletonLoaderTdLogs"></td>
+      </tr>
+
+      <tr style="height: 100px;">
+        <td class="level skeletonLoaderTdLogs"></td>
+        <td class="date skeletonLoaderTdLogs"></td>
+        <td class="message skeletonLoaderTdLogs"></td>
+        <td class="level skeletonLoaderTdLogs"></td>
+      </tr>
+
+      <tr style="height: 100px;">
+        <td class="level skeletonLoaderTdLogs"></td>
+        <td class="date skeletonLoaderTdLogs"></td>
+        <td class="message skeletonLoaderTdLogs"></td>
+        <td class="level skeletonLoaderTdLogs"></td>
+      </tr>
+
+      <tr style="height: 100px;">
+        <td class="level skeletonLoaderTdLogs"></td>
+        <td class="date skeletonLoaderTdLogs"></td>
+        <td class="message skeletonLoaderTdLogs"></td>
+        <td class="level skeletonLoaderTdLogs"></td>
+      </tr>
+
+      <tr style="height: 100px;">
+        <td class="level skeletonLoaderTdLogs"></td>
+        <td class="date skeletonLoaderTdLogs"></td>
+        <td class="message skeletonLoaderTdLogs"></td>
+        <td class="level skeletonLoaderTdLogs"></td>
+      </tr>
+
+      <tr style="height: 100px;">
+        <td class="level skeletonLoaderTdLogs"></td>
+        <td class="date skeletonLoaderTdLogs"></td>
+        <td class="message skeletonLoaderTdLogs"></td>
+        <td class="level skeletonLoaderTdLogs"></td>
+      </tr>
+
+    </table>
+
+  </div>
+
+
+  <!-- Set loader for admins page -->
+  {{else if admins}}
+
+
+  <div id="adminsPage" class="pageContainer">
+
+    <!-- Heading -->
+    <div class="pageHeader">
+      <span class="skeletonLoaderParagraph"></span>
+    </div>
+
+    <table class="adminComponentTable">
+
+      <tr class="adminsInTable">
+        <td class="name skeletonLoaderTdAdmins"></td>
+        <td class="email skeletonLoaderTdAdmins"></td>
+        <td class="scope skeletonLoaderTdAdmins"></td>
+        <td class="state skeletonLoaderTdAdmins"></td>
+        <td class="action skeletonLoaderTdAdmins"></td>
+      </tr>
+
+      <tr class="adminsInTable">
+        <td class="name skeletonLoaderTdAdmins"></td>
+        <td class="email skeletonLoaderTdAdmins"></td>
+        <td class="scope skeletonLoaderTdAdmins"></td>
+        <td class="state skeletonLoaderTdAdmins"></td>
+        <td class="action skeletonLoaderTdAdmins"></td>
+      </tr>
+
+      <tr class="adminsInTable">
+        <td class="name skeletonLoaderTdAdmins"></td>
+        <td class="email skeletonLoaderTdAdmins"></td>
+        <td class="scope skeletonLoaderTdAdmins"></td>
+        <td class="state skeletonLoaderTdAdmins"></td>
+        <td class="action skeletonLoaderTdAdmins"></td>
+      </tr>
+
+      <tr class="adminsInTable">
+        <td class="name skeletonLoaderTdAdmins"></td>
+        <td class="email skeletonLoaderTdAdmins"></td>
+        <td class="scope skeletonLoaderTdAdmins"></td>
+        <td class="state skeletonLoaderTdAdmins"></td>
+        <td class="action skeletonLoaderTdAdmins"></td>
+      </tr>
+
+      <tr class="adminsInTable">
+        <td class="name skeletonLoaderTdAdmins"></td>
+        <td class="email skeletonLoaderTdAdmins"></td>
+        <td class="scope skeletonLoaderTdAdmins"></td>
+        <td class="state skeletonLoaderTdAdmins"></td>
+        <td class="action skeletonLoaderTdAdmins"></td>
+      </tr>
+
+    </table>
+
+  </div>
+
+
+  <!-- Set loader for dashboard page -->
+  {{else if dashboard}}
+
+  <div class="dashboardContainer">
+
+    <!-- Left side of the page -->
+    <div id="dashboardContainerLeft">
+
+      <div class="statisticItem">
+
+        <!-- Component heading -->
+        <p class="statisticItemHeading" class="skeletonLoaderParagraph"></p>
+
+
+        <div  style="display: flex; flex-direction: row !important; padding-left: 4px;">
+
+          <div class="productContainer">
+
+            <!-- Set first image in images array as product/supplement image -->
+            <div class="productImage skeletonLoaderProduct"></div>
+            <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+          </div>
+
+          <div class="productContainer">
+
+            <!-- Set first image in images array as product/supplement image -->
+            <div class="productImage skeletonLoaderProduct"></div>
+            <p class="skeletonLoader skeletonLoaderParagraph"></p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <br/>
+
+      <div class="statisticItem" style="padding: 10px;">
+
+        <!-- Component heading -->
+        <p class="statisticItemHeading skeletonLoaderParagraph" ></p>
+        <br/>
+        <p class="statisticItemHeading statisticItemNumber skeletonLoaderNumber"></p>
+
+      </div>
+
+      <br/>
+
+      <div class="statisticItem" style="padding: 10px;">
+
+        <!-- Component heading -->
+        <p class="statisticItemHeading skeletonLoaderParagraph" ></p>
+        <div class="filterItem skeletonLoaderParagraph" style="box-shadow: none !important;"></div>
+        <br/>
+        <p class="statisticItemHeading statisticItemNumber skeletonLoaderNumber"></p>
+
+      </div>
+
+
+
+    </div>
+
+
+    <!-- Right side of the page -->
+    <div id="dashboardContainerRight">
+
+      <!-- Graph heading -->
+      <p id="sellingByCountryHeading" class="skeletonLoaderParagraph"></p>
+
+      <!-- Graph labels -->
+      <table>
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 180px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 145px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 128px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 110px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 99px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 89px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 74px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 68px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 61px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 59px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 54px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 50px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 39px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 28px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 19px;"></td>
+        </tr>
+
+        <tr>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings"></td>
+          <td class="sellStatisticHeadings" class="skeletonLoaderTableHeadings" style="width: 10px;"></td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+
+  <!-- Loader to show before adding or editing product or supplement -->
+  {{else if addEdit}}
+
+  <div class="addEditContainer">
+
+    <!-- Page header -->
+    <div class="pageHeader">
+      <span class="skeletonLoaderParagraph"></span>
+    </div>
+
+    <!-- Page container -->
+    <div class="addEditSupplementContainer">
+
+      <!-- Left side of the page -->
+      <div class="addEditSupplementLeftContainer">
+        <p class="skeletonLoaderInput"></p>
+        <br/><br/>
+        <div class="skeletonLoaderTextarea" style="height: 180px;"></div>
+      </div>
+
+      <br/><br/>
+      <!-- Right side of the page-->
+      <div class="addEditSupplementRightContainer">
+        <br/>
+        <div class="skeletonLoaderTextarea" style="height: 110px;"></div>
+        <br/><br/>
+
+        <div id="skeletonTagsContainer">
+           <table>
+             <tr>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+             </tr>
+             <tr>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+             </tr>
+             <tr>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+             </tr>
+             <tr>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+               <td class="skeletonLoaderTag"></td>
+             </tr>
+           </table>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Set page actions buttons -->
+    <div class="addEditButtons">
+      <p class="skeletonLoaderParagraph"></p>
+      <p class="skeletonLoaderParagraph" style="box-shadow: none !important;"></p>
+    </div>
+
+  </div>
+
+
+{{/if}}
+
+
+
+
+{{yield}}

@@ -1,0 +1,52 @@
+<div class="addEditContainer fade-in">
+
+  <!-- Page header -->
+  <div class="pageHeader">
+    <span>Add product</span>
+  </div>
+
+  <!-- PAge container -->
+  <div class="addEditProductContainer">
+
+    <!-- Left side of the page -->
+    <div class="addEditProductLeftContainer">
+      <!-- Insert name component and give it value - '' when adding and some value when editing supplement -->
+      {{name-input-component name=enteredName}}
+      <br/>
+      <!-- Insert price-discount-component -->
+      {{price-discount-component}}
+      <br/>
+      <!-- Insert supplement items component and give it supplements data, set actionType to 'add' so that we can know inside component is user is editing or adding new product
+            selectedSupplements = [] -->
+
+      {{supplement-item-component item=model.supplements actionType='add' selectedSupplements=selectedSupplementIds}}
+
+    </div>
+
+    <!-- Left side of the page -->
+    <div class="addEditProductRightContainer">
+      <!-- Insert images upload component and set actionType to 'add' so that image preview div is empty -->
+      {{images-input-component actionType='add'}}
+
+      <br/>
+      <!-- Insert tags list component, set actionType to '' so that none of the tags is marked -->
+      <p class="tagsListContainerHeading">*TAGS</p>
+      {{tags-list-component actionType='add' item=model.tags selectedTags=selectedTagIds}}
+
+      <br/>
+      {{product-dimensions-component}}
+
+    </div>
+
+  </div>
+
+  <!-- Set page actions buttons -->
+  <div class="addEditButtons">
+    <p {{action 'goToProductsPage'}}>CANCEL</p>
+    <p {{action 'saveData'}}>SAVE</p>
+  </div>
+
+</div>
+
+
+{{outlet}}

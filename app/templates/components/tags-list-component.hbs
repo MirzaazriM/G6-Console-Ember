@@ -1,0 +1,11 @@
+
+<div class="tagsListContainer">
+  {{#each item as |tag|}}
+    <div id="{{tag.name}}" class="inactiveTag" {{action 'selectUnselectTag' tag.name tag.id}}>
+      {{tag.name}}
+    </div>
+  {{/each}}
+
+</div>
+
+{{yield}}

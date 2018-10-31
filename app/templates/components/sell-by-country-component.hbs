@@ -1,0 +1,18 @@
+<div class="sellByCountryComponent">
+
+  <!-- Set graph values-->
+  <table>
+    <tr>
+      <td class="sellingCountry">{{item.country}}</td>
+      <!-- Call helper to format sales number -->
+      <td class="sellingSales">{{format-statistic-sales-number item.sales}}</td>
+      <td class="sellingGraph">
+        <!-- Call helper to calculate width of the span according to current sales number -->
+        <span style="width: {{calculate-sell-by-country-graph item.sales}}%"></span>
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+{{yield}}

@@ -1,0 +1,12 @@
+
+<div id="header" {{action 'closeDropdowns'}}>
+
+  <img id="menuIcon" src="assets/icons/menu.svg" {{action 'toggleMenu'}}/>
+  <p id="routeName">{{currentPage}}</p>
+  <img id="userProfileIcon" src="assets/icons/account-circle.svg" {{action 'toggleUserDropdown'  bubbles=false}}/>
+
+  {{user-dropdown-component}}
+
+</div>
+
+{{yield}}

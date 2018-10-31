@@ -1,0 +1,21 @@
+
+
+<p id="supplementListHeading">*SUPPLEMENTS</p>
+<div class="supplementsList">
+
+  <div class="supplementComponentSearcher">
+    <img src="assets/icons/magnify.svg"/>
+    <input id="supplementItemSearcher" onkeyup={{action 'searchSupplements'}}/>
+  </div>
+
+  {{#each item as |supplement|}}
+    <div id="{{supplement.id}}" class="supplementItem" {{action 'selectUnselectSupplement' supplement.id}}>
+      <img class="supplementImage" src="{{get-array-item supplement.images}}" />
+      <span class="supplementName">{{supplement.name}}</span>
+    </div>
+  {{/each}}
+</div>
+
+
+
+{{yield}}

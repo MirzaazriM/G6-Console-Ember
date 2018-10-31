@@ -1,0 +1,18 @@
+
+<div {{action 'stopHiding' bubbles=false}}>
+
+  <div id="filter" {{action 'toggleStatisticFilter'}}>
+    <span id="selectedFilterItem">{{selected}}</span>
+    <img src="assets/icons/chevron-down.svg" />
+  </div>
+
+  <div id="filterDrop">
+    {{#each filters as |filter|}}
+      {{filter-dropdown-item-component item=filter clickedPeriod=selected}}
+    {{/each}}
+  </div>
+
+</div>
+
+
+{{yield}}

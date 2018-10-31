@@ -1,0 +1,19 @@
+<div class="imagesInputContainer">
+  <!-- Component heading -->
+  <p>*IMAGES</p>
+
+  <!-- Images container -->
+  <div id="imagePreview">
+    <!-- Element which opens browse window on click -->
+    <div class="addImageElement" {{action 'openUploadImageWindow'}}>
+      <span>+</span>
+    </div>
+
+    <!-- Uploaded images container, here will be rendered all uploaded images -->
+    <div id="imagesPreviewContainer"></div>
+
+  </div>
+
+</div>
+
+{{yield}}

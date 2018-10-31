@@ -1,0 +1,17 @@
+
+<div id="confirmationDialogContainer">
+  <!-- Dialg heading -->
+  <p class="dialogHeading">Are you sure?</p>
+
+  <!-- Dialog message -->
+  <p class="confirmationMessage">This will delete selected {{item}}.</p>
+
+  <!-- Dialog buttons -->
+  <div class="dialogButtonContainer">
+    <p class="cancelButton" {{action 'closeDialog'}}>No</p>
+    <p class="addButton" {{action 'delete'}}>Yes</p>
+  </div>
+
+</div>
+
+{{yield}}

@@ -1,0 +1,184 @@
+<!-- Page container -->
+<div class="pageContainer fade-in">
+
+  <!-- Page header -->
+  <div class="pageHeader">
+    <h1>User Manual</h1>
+  </div>
+
+  <!-- Text container -->
+  <div id="helpContainer">
+
+    <h2>Dashboard Page</h2>
+    <p>
+      The Dashboard page consists of four sections:
+
+      <ul>
+        <li>The Last Added Items section shows the two most recent products added to the console</li>
+        <li>The Total Active Products section displays total number of products in the console where the quantity in Inventory is greater than 0 and the product is available for sale</li>
+        <li>The Items Sold section shows the number of products sold for a specific period of time, based on a selected filter value (the default value is Last 7 Days)</li>
+        <li>The Selling by Country section shows the number of products sold in each country (this section will show the countries with the highest sales volume, up to a maximum of 10 countries, displayed in descending order by volume)</li>
+      </ul>
+
+      The data is updated in real time after each order is placed.
+    </p>
+
+    <h2>Supplements Page</h2>
+    <p>
+      The Supplements Page displays all supplements which have been added to the system. A supplement will be added to the Supplements page so that it can be logged into the database and selected to be sold in the app on the Products page.  A search field is located in the upper right corner of the page, where the user can search the list of supplements based on the text entered.
+
+      Each supplement in the list contains two components:
+
+      <ul>
+        <li>Supplement image</li>
+        <li>Supplement name</li>
+      </ul>
+
+      When clicking on a Supplement Card, the user will be redirected to the Edit Page for that supplement.
+
+      In the bottom right corner of the page there is a button which directs the user to the Add Supplement page.
+    </p>
+
+    <h2>Add Supplement Page</h2>
+    <p>
+      The Add Supplement page consists of 4 sections:
+
+      <ul>
+        <li>The Name section contains the field for inputting the name of the supplement</li>
+        <li>The Description section contains the field for inputting the description of the supplement</li>
+        <li>The Images section is where an image of the supplement can be uploaded by clicking the Plus sign.  Images of all types are allowed (.gif, .jpeg, .png), and recommended size of the image is 1024x512 pixels. User can upload multiple images but only the first uploaded image will be used as supplement image.</li>
+        <li> The Tags section is used for selecting Tags of the supplement, which describe the characteristics of the Supplement to the consumer</li>
+      </ul>
+
+      The Cancel Button will clear all entered data and redirect the user to the Supplements page.
+
+      The Save button will save added or edited data to the server and redirect the user to the Supplements page. If some of the fields are left empty, the message “Incomplete data” will appear in the bottom left corner of the page, and the user will be required to populate these fields before the data can be saved.
+    </p>
+
+    <h2>Edit Supplement Page</h2>
+    <p>
+      The Edit Supplement page consists of 4 sections:
+
+      <ul>
+        <li>The Name section contains the filed for editing the name of the supplement</li>
+        <li>The Description section contains the field for editing the description of the supplement</li>
+        <li>The Images section is where an image of the supplement can be changed by clicking the Plus sign and uploading the new one.  Images of all types are allowed (.gif, .jpeg, .png), and recommended size of the image is 1024x512 pixels. User can upload multiple images but only the first uploaded image will be used as supplement image. New uploaded image will be used instead of the previous image. Old image will be deleted once a new image is uploaded.</li>
+        <li>The Tags section is used for adding or removing tags that have been selected for the supplement</li>
+      </ul>
+
+      The Cancel button will clear all entered data and redirect the user to the Supplements page.
+
+      The Save button will save any edited data to the server and redirect the user to the Supplements page. If one or more fields are left empty, the message “Incomplete data” will appear in the bottom left corner of the page, and the user will be required to populate these fields before the data can be saved.
+      The Delete button, located in the upper right corner, will delete a supplement from the database.  A dialog window will appear requesting confirmation of the action before the supplement is deleted. If the user presses Cancel, the dialog window will close and the supplement will not be deleted. If the user presses Yes, the dialog window will close, the supplement will be deleted from the database and will no longer available for sale.  The user will then be redirected to the Supplements page.
+    </p>
+
+
+    <h2>Products Page</h2>
+    <p>
+      The Products page displays all products which have been added to the system.  A product is defined as one supplement or a group of supplements which will be sold together.  A search field is located in the upper right corner of the page, where the user can search the list of products based on the text entered.
+
+      Each product in the list contains two components:
+
+      <ul>
+        <li>Product image</li>
+        <li>Product name</li>
+      </ul>
+
+      When clicking on a Product Card, the user will be redirected to the Edit Page for that product.
+
+      In the bottom right corner of the page there is a button that redirects the user to the Add Product page.
+    </p>
+
+    <h2>Add Product Page</h2>
+    <p>
+      The Add Product page consists of 8 sections:
+
+      <ul>
+        <li>The Name section contains the field for inputting the name of the product</li>
+        <li>The Price section contains the field for setting the price of the product</li>
+        <li>The Price with Discount section contains the field for setting the discounted price of the product</li>
+        <li>The Images section is where an image of the product can be uploaded by clicking the Plus sign.  Images of all types are allowed (.gif, .jpeg, .png), and recommended size of the image is 1024x512 pixels. User can upload multiple images but only the first uploaded image will be used as product image.</li>
+        <li>The Supplements section contains a list of all supplements that have been added to the Supplements Page, and is used for selecting which supplement(s) will be included in the Product.</li>
+        <li>The Tags section is used for selecting Tags for the product, which describe the characteristics of the Product to the consumer</li>
+        <li>The Package Dimensions section contains the fields for setting the package width (inches), weight (ounces), height (inches) and length (inches). This data is necessary so that shipping costs are calculated precisely.</li>
+        <li>The Number of Products contains the field for inputting the quantity of the product that is currently in inventory and available for sale.</li>
+      </ul>
+
+      The Cancel button will clear all entered data and redirect the user to the Product page.
+
+      The Save button will save data to the server and redirect the user to the Product page. The Product will be saved to Stripe in real time and will be immediately available for sale. If one or more fields are left empty, the message “Incomplete data” will appear in the bottom left corner of the page, and the user will be required to populate these fields before the data can be saved.
+    </p>
+
+    <h2>Edit Product Page</h2>
+    <p>
+      The Edit Product page consists of the following 8 sections:
+
+      <ul>
+        <li>The Name section contains the field for editing the name of the product</li>
+        <li>The Price section contains the field for editing the price of the product</li>
+        <li>The Price with Discount section contains the field for editing discounted price of the product</li>
+        <li>The Images section is where an image of the product can be changed by clicking the Plus sign and uploading the new one.  Images of all types are allowed (.gif, .jpeg, .png), and recommended size of the image is 1024x512 pixels. User can upload multiple images but only the first uploaded image will be used as product image. New uploaded image will be used instead of the previous image. Old image will be deleted once a new image is uploaded.</li>
+        <li>The Supplements section contains the list of all supplements that have been added to the Supplements Page.  In this section, Supplements can be added or deleted from the Product.  To add a supplement, click on the supplement of choice at which time the supplement will be highlighted in blue, and then click Save.  To remove a supplement, click on the highlighted supplement that is to be removed, and then click Save.</li>
+        <li>The Tags section is used to add or remove tags assigned to the product</li>
+        <li>The Package Dimensions section contains the fields for editing the package width (inches), weight (ounces), height (inches) and length (inches).</li>
+        <li>The Number of Products section contains the field where the quantity of the product that is currently in inventory and ready for sale can be updated.  The number of products is updated automatically each time a product is sold.</li>
+      </ul>
+
+      The Cancel button will clear all entered data and redirect the user to the Product page.
+      The Save button will save the product data to the server and redirect the user to the Product page. The product data will also be saved to Stripe in real time and be immediately available for sale. If one or more fields are left empty, the message “Incomplete data” will appear in the bottom left corner of the page, and the user will be required to populate these fields before the data can be saved.
+
+      The Delete button will delete a product from the database.  A dialog window will appear requesting confirmation of the action before the product is deleted. If the user presses Cancel, the dialog window will close and the product will not be deleted. If the user presses Yes, the dialog window will close, the product will be deleted and no longer available for sale, and the user will be redirected to the Product page.
+    </p>
+
+    <h2>Purchases Page</h2>
+    <p>
+      The Purchases Page consists of two sections:
+
+      <ul>
+        <li>Purchased Products</li>
+        <li>Selling Statistic</li>
+      </ul>
+
+      The Purchased Products section lists all orders that have been placed in chronological order.  The Order Number (from Stripe), the Order Date, the Country from which the order was placed, and the Current Status (Action) of the order (i.e. “Order Received”, “Order Shipped” etc.) are all displayed for each order.  Additional order details can be viewed (customer name, address, etc.) when clicking on the order.  A dialog window will appear with this additional information, and this window will close when clicking on the Cancel button.  The Shipped button will set this order as shipped, and the Received button will set this this order as received by the customer.
+
+      The Selling Statistic section lists all products in alphabetical order where at least one unit has been sold.  The name of the product and the units sold are displayed in this section.
+
+      The Purchased Product data can be downloaded to a .csv file by clicking the “Down Arrow” in the bottom right corner of the screen.
+    </p>
+
+
+    <h2>Tags Page</h2>
+    <p>
+      The Tags page displays all the Tags that are available to assign to a supplement or a product.  Tags are used to describe the characteristics of a particular supplement or product to the consumer. By clicking on the “Plus” icon in bottom right corner of the page, a dialog window appears, where the user can enter a new tag and add it to the system. Each listed tag has a Delete icon in the shape of a trash can. When clicking on the Delete icon, a new dialog window opens which asks the user to confirm the action, and once confirmed, the tag is deleted from the database.  All tags are listed on the Tags page, and in the Tags section of the add/edit supplement/product pages.
+    </p>
+
+    <h2>Logs Page</h2>
+    <p>
+      The Logs Page contains a list of all warnings and errors reported by the system. In the upper right corner of the page there is a dropdown where user can filter logs based on the page from which the warning or error was generated (Admin, Mobile, Products, Supplements and Tags).  Every log contains information about the warning or error, a delete icon for deleting the log, and an email icon for sending an email with log data to the developers for remediation (this function is currently under construction).
+    </p>
+
+
+    <h2>Admins Page</h2>
+    <p>
+      The Admins page contains a list of all users which have permission to login to the console and make changes.  There are three types of access rights. Developer access allows user to see the data and to test console funcionality, but not to add, edit or delete any data from the console. Admin access allows user to see the data, add new data, change or delete existing data. Admin user can not add, edit or delete existing admins at Admins page. Manager user has all privileges as admin user, but manager can also add, edit or delete admin users at Admins page.  A user with Manager rights can add a new admin by clicking on the “Plus” icon in the bottom right corner of the Admins page. A dialog window will appear requesting that the user provide the email of the new admin as well as the access type (Developer, Manager, or Admin).  By clicking on Edit icon (in the shape of a pencil), a dialog window appears where the user can change the scope of the admin. By clicking on the Delete icon, a confirmation dialog window opens and once confirmed, the admin will no longer have access rights to the console.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- Email dialog -->
+<div id="emailDialogWrapper" class="dialogWrapper">
+  {{send-email-dialog callSendEmail=(action 'sendEmail')}}
+</div>
+
+<!-- Overlay -->
+<div id="dialogOverlay" {{action 'closeDialog'}}></div>
+
+<!-- Paper fab button -->
+<div id="openEmailDialogButton" {{action 'openDialog'}}>
+  {{paper-fab-component icon='email-white'}}
+</div>
+
+
+{{outlet}}

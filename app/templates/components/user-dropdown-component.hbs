@@ -1,0 +1,13 @@
+
+<div id="userProfileDropdown" class="arrow_box" {{action 'stopEventPropagation' bubbles=false}}>
+  <div id="userInfo">
+    <img src="assets/pictures/login_image.jpg"/>
+    <div>
+      <p>User name</p>
+      <p id="userEmail">myemail@gmail.com</p>
+    </div>
+  </div>
+  <div id="logoutButton" {{action 'logout'}}>Sign Out</div>
+</div>
+
+{{yield}}

@@ -1,0 +1,56 @@
+<div class="addEditContainer fade-in">
+
+  <div class="pageHeader">
+    <span>Edit product</span>
+    <span class="deleteButton" {{action 'openConfirmationDialog'}}>DELETE</span>
+  </div>
+
+
+  <div class="addEditProductContainer">
+
+    <div class="addEditProductLeftContainer">
+
+      {{name-input-component name=model.product.0.name}}
+      <br/>
+      {{price-discount-component price=model.product.0.price discount=model.product.0.discount}}
+      <br/>
+      {{! description-input-component description=enteredDescription}}
+
+      {{supplement-item-component item=model.supplements selectedSupplements=selectedSupplementIds actionType='edit'}}
+
+    </div>
+
+
+    <div class="addEditProductRightContainer">
+
+      {{images-input-component actionType='edit'}}
+
+      <br/>
+
+      <p class="tagsListContainerHeading">*TAGS</p>
+      {{tags-list-component actionType='edit' item=model.tags selectedTags=selectedTagIds}}
+
+      <br/>
+      {{product-dimensions-component item=model.product.0.dimensions}}
+
+    </div>
+
+  </div>
+
+  <div class="addEditButtons">
+    <p {{action 'goToProductsPage'}}>CANCEL</p>
+    <p {{action 'saveData'}}>SAVE</p>
+  </div>
+
+</div>
+
+<!-- Set confirmation dialog-->
+<div id="confirmationDialog" class="dialogWrapper confirmationDialog">
+  <!-- item='tag' sets dialog item value, closure callDelete is triggered from component but ecexuted in controller -->
+  {{confirmation-dialog-component callDelete=(action 'deleteProduct') item='product'}}
+</div>
+
+<!-- Set dialog overlay -->
+<div id="dialogOverlay" {{action 'closeDialog'}}></div>
+
+{{outlet}}

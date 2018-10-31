@@ -1,0 +1,16 @@
+<div id="tagDialogContainer">
+
+  <p class="dialogHeading">Add tag</p>
+
+  <div id="tagDialogInputs">
+    {{input id="tagInput" value=enteredTag placeholder="Enter tag name..."}}
+  </div>
+
+  <div class="dialogButtonContainer">
+    <p class="cancelButton" {{action 'closeDialog'}}>Cancel</p>
+    <p class="addButton" {{action 'addTag'}}>Add</p>
+  </div>
+
+</div>
+
+{{yield}}

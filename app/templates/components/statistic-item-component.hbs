@@ -1,0 +1,38 @@
+<div class="statisticItem">
+
+  <!-- Component heading -->
+  <p class="statisticItemHeading">{{heading}}</p>
+
+  <!-- Check if number element is hidden or not -->
+  {{#if showNumber}}
+    <p class="statisticItemHeading statisticItemNumber">{{number}}</p>
+  {{/if}}
+
+  <!-- Check if sales element is hidden or not -->
+  {{#if showSales}}
+    <p id="itemsSold" class="statisticItemHeading statisticItemNumber">{{number}}</p>
+  {{/if}}
+
+  <!-- Check if filter is hidden or not -->
+  {{#if showFilter}}
+    <div class="filterItem">
+      <!-- Add filter values to filter component and set default value-->
+      <!-- actionType property is needed so that we know where exactly is this filter used -->
+      <!-- callStatisticItem is just a closure function which calls another function when filtering number of sold items -->
+      {{filter-dropdown-component callStatisticItem=(action 'callDashboardPage') actionType='itemsSold' filters=periodFilters selected=selectedItem}}
+    </div>
+  {{/if}}
+
+  <!-- Check if last 2 added products container is hidden or not -->
+  {{#if showLastAdded}}
+    <div id="lastAddedItemsContainer">
+      <!-- Render products -->
+      {{#each data as |product|}}
+        {{product-supplement-component showEdit=false item=product}}
+      {{/each}}
+    </div>
+  {{/if}}
+
+</div>
+
+{{yield}}

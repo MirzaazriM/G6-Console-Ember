@@ -1,0 +1,21 @@
+
+<div id="mainMenu">
+
+  <!-- Logo -->
+  <div id="logoContainer">
+    <img id="logo" src="assets/pictures/G6-logoonly.svg"/>
+  </div>
+
+
+
+  <!-- Loop through menu items and set them as page links -->
+  {{#each menuItems as |menu|}}
+    {{#link-to menu.item  class="menuItems"}}
+        <div id="{{menu.item}}" class="menuItemWrapper" {{action 'setClickedItemStyle' menu.item}}><img class="menuIcon" src="assets/icons/{{menu.icon}}">{{menu.item}}</div>
+    {{/link-to}}
+  {{/each}}
+
+</div>
+
+
+{{yield}}

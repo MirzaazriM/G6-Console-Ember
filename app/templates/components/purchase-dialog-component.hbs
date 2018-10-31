@@ -1,0 +1,29 @@
+
+<div id="purchaseDialogComponent">
+
+  <p>INFO</p>
+
+  <p class="detailDialogHeading">PRODUCT</p>
+  <p class="dialogValues">{{productName}}</p>
+
+  <p class="detailDialogHeading">QUANTITIES</p>
+  <p class="dialogValues">{{quantity}}</p>
+
+  <p class="detailDialogHeading">CUSTOMER NAME</p>
+  <p class="dialogValues">{{customerName}}</p>
+
+  <p class="detailDialogHeading">ADDRESS</p>
+  <p class="dialogValues">{{address}}</p>
+
+  <p class="detailDialogHeading">CONTACT</p>
+  <p class="dialogValues">{{contact}}</p>
+
+  <div class="detailsDialogButtons">
+    <p {{action 'closeDetailsDialog'}}>CANCEL</p>
+    <p id="shippedButton" {{action 'setShipped'}}>SHIPPED</p>
+    <p id="receivedButton" {{action 'setReceived'}}>RECEIVED</p>
+  </div>
+
+</div>
+
+{{yield}}

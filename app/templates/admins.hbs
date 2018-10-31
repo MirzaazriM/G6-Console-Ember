@@ -1,0 +1,46 @@
+<div id="adminsPage" class="pageContainer fade-in">
+
+  <!-- Heading -->
+  <div class="pageHeader">
+    <span>Admins</span>
+  </div>
+
+  <!-- Set table headings -->
+  <table id="adminsTable">
+    <tr>
+      <td id="adminName">Name</td>
+      <td id="adminEmail">Email</td>
+      <td id="adminScope">Scope</td>
+      <td id="adminStatus">Status</td>
+      <td id="adminAction">Action</td>
+    </tr>
+  </table>
+
+  <!-- Loop through data bind selectedId to appropriate controller property for tracking via observer -->
+  {{#each model as |admin|}}
+    {{admin-component item=admin selectedId=selectedIdToDelete adminEditing=isAdminEditing oldScope=selectedScopeToSend enteredEmail=selectedEmailToSend}}  <!-- enteredEmail=selectedEmailToSend, oldScope=selectedScopeToSend - Three way binding between admin template, admin component and admin dialog -->
+  {{/each}}
+
+</div>
+
+<!-- Set confirmation dialog -->
+<div id="confirmationDialog" class="dialogWrapper confirmationDialog">
+  <!-- Set component properties and closure action for triggering appropriate controller action -->
+  {{confirmation-dialog-component item='admin' callDelete=(action 'deleteAdmin')}}
+</div>
+
+<!-- Set admin dialog -->
+<div id="adminDialogWrapper" class="dialogWrapper">
+  <!-- Set dialog closure action and properties binding with controller properties -->
+  {{admin-dialog-component callAdminFunction=(action 'addEditAdmin') adminEditing=isAdminEditing selectedScope=selectedScopeToSend enteredEmail=selectedEmailToSend}}  <!-- enteredEmail=selectedEmailToSend, oldScope=selectedScopeToSend - Three way binding between admin template, admin component and admin dialog -->
+</div>
+
+<!-- Set paper fab and set its action on click -->
+<div id="addAdminButton" {{action 'openAddAdminDialog'}}>
+  {{paper-fab-component icon='plus'}}
+</div>
+
+<!-- Set dialog overlay -->
+<div id="dialogOverlay" {{action 'closeDialog'}}></div>
+
+{{outlet}}

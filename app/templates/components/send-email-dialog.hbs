@@ -1,0 +1,23 @@
+<div id="emailDialogContainer">
+
+  <!-- Dialog heading -->
+  <p class="dialogHeading">Send email</p>
+
+  <!-- Dialog inut elements-->
+  <div id="emailDialogInputs">
+    <!-- Set email input as set and disabled -->
+    {{input id="emailInput" disabled="oglecevacmirza@gmail.com" value='oglecevacmirza@gmail.com'}}
+    <br/>
+    <br/>
+    <textarea id="emailBodyInput" placeholder="Enter your message..."></textarea>
+  </div>
+
+  <!-- Dialog buttons -->
+  <div class="dialogButtonContainer">
+    <p class="cancelButton" {{action 'closeDialog'}}>Cancel</p>
+    <p class="addButton" {{action 'sendEmail'}}>Send</p>
+  </div>
+
+</div>
+
+{{yield}}

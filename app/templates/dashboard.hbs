@@ -1,0 +1,40 @@
+<div class="dashboardContainer fade-in">
+
+  <!-- Left side of the page -->
+  <div id="dashboardContainerLeft">
+    <!-- Set statistic item component for last two added products - set data, heading, and set which elements of componet to show -->
+    {{statistic-item-component heading='Last Added Items' data=model.last showNumber=false showLastAdded=true}}
+    <br/>
+    <!-- Set statistic item component for total active products - set data, heading, and set which elements of componet to show -->
+    {{statistic-item-component heading='Total Active Products' number=model.active}}
+    <br/>
+    <!-- Set statistic item component for number of items sold - set data, heading, and set which elements of componet to show -->
+    <!-- callDashboard function is called when filtering number of sold items by period -->
+    {{statistic-item-component callDashboard=(action 'changeItemsSoldData') heading='Items Sold' selectedItem=selectedFilterValue number=model.sold.sales showNumber=false showSales=true showFilter=true}}
+  </div>
+
+
+  <!-- Right side of the page -->
+  <div id="dashboardContainerRight">
+
+    <!-- Graph heading -->
+    <p id="sellingByCountryHeading">Selling by country</p>
+
+    <!-- Graph labels -->
+    <table>
+      <tr>
+        <td class="sellStatisticHeadings">Country</td>
+        <td class="sellStatisticHeadings">Sells</td>
+        <td class="sellStatisticHeadings">Graph</td>
+      </tr>
+    </table>
+
+    <!-- Render graph data -->
+    {{#each model.stats as |stat|}}
+      {{sell-by-country-component item=stat}}
+    {{/each}}
+  </div>
+
+</div>
+
+{{outlet}}

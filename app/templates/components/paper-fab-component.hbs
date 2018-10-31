@@ -1,0 +1,20 @@
+
+<!-- Check page value and set appropriate view -->
+{{#if page}}
+  <!-- Redirect to page on click -->
+  {{#link-to page}}
+    <div id="paperFab" {{action 'changeCurrentPage'}}>
+      <!-- Set given icon value -->
+      <img src="assets/icons/{{icon}}.svg" />
+    </div>
+  {{/link-to}}
+
+  {{else}}
+    <!-- Do not redirect to any page -->
+    <div id="paperFab">
+      <!-- Set given icon value -->
+      <img src="assets/icons/{{icon}}.svg" />
+    </div>
+{{/if}}
+
+{{yield}}

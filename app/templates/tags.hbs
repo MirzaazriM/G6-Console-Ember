@@ -1,0 +1,44 @@
+<div id="tagsPage" class="pageContainer fade-in">
+
+  <!-- Set header -->
+  <div class="pageHeader">
+    <span>Tags</span>
+  </div>
+
+  <!-- Set table heading -->
+  <div id="tagsTableHeading">
+    <span>Name</span>
+    <span>Action</span>
+  </div>
+
+  <!-- Loop through data and list tags -->
+  <div id="tagsDataContainer">
+    {{#each model as |tag|}}
+      <!-- Set tag data and bind selectedId=selectedIdToDelete for tracking clicked id -->
+      {{tag-component item=tag selectedId=selectedIdToDelete}}
+    {{/each}}
+  </div>
+</div>
+
+<!-- Set confirmation dialog-->
+<div id="confirmationDialog" class="dialogWrapper confirmationDialog">
+  <!-- item='tag' sets dialog item value, closure callDelete is triggered from component but ecexuted in controller -->
+  {{confirmation-dialog-component callDelete=(action 'deleteTag') item='tag'}}
+</div>
+
+<!-- Set tag dialog -->
+<div id="tagDialogWrapper" class="dialogWrapper">
+  <!-- enteredTag binds represents name of entered tag and it is binded to controller property value , closure callAddTag is triggered from component but executed in controller -->
+  {{tag-dialog-component callAddTag=(action 'addTag') enteredTag=tagToAdd}}
+</div>
+
+<!-- Set dialog overlay -->
+<div id="dialogOverlay" {{action 'closeDialog'}}></div>
+<!--todo check if this can be in application.hbs-->
+
+<!-- Open tag dialog by clickin paper fab component  - there is no page property and by clicking on it there is no redirection -->
+<div id="addTagButton" {{action 'openAddTagDialog'}}>
+  {{paper-fab-component icon='plus'}}
+</div>
+
+{{outlet}}

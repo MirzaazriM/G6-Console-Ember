@@ -1,0 +1,66 @@
+<div class="pageContainer fade-in">
+
+  <!-- Page tabs -->
+  <div id="purchasesTabContainer">
+    <!-- On click change tab view -->
+    <p id="purchasesProductsTab" {{action 'changeTab' 'products'}}>PURCHASED PRODUCTS</p>
+    <p id="sellingStatisticsTab" {{action 'changeTab' 'statistics'}}>SELLING STATISTICS</p>
+  </div>
+
+  <!-- Products tab -->
+  <div id="productsTabContainer">
+    <!-- Products tab heading -->
+    <table id="productsTable">
+      <tr>
+        <td id="productName">Order ID</td>
+        <td id="productOrdered">Date and time</td>
+        <!--<td id="productQuantity">Quantity</td>-->
+        <td id="productLocation">Location</td>
+        <!--<td id="productStatus">Status</td>-->
+        <td id="productAction">Action</td>
+      </tr>
+    </table>
+
+    <!-- Loop through data and list purchases -->
+    {{#each model.purchases as |product|}}
+      {{purchased-products-component item=product callDetailsDialog=(action 'openDetailsDialog') purchase=selectedPurchase}}
+    {{/each}}
+
+  </div>
+
+
+  <!-- Statistics tab -->
+  <div id="statisticsTabContainer">
+    <!-- Statistics tab heading -->
+    <table id="statisticsTable">
+      <tr>
+        <td id="statisticName">Name</td>
+        <td id="statisticSold">Sold</td>
+      </tr>
+    </table>
+
+    <!-- Loop through data and list each product statistic -->
+    {{#each model.statistic as |stat|}}
+      {{purchased-statistic-component item=stat}}
+    {{/each}}
+
+  </div>
+
+</div>
+
+
+<div {{action 'downloadOrdersFile'}}>
+  {{download-button-component icon='download'}}
+</div>
+
+<!-- Set tag dialog -->
+<div id="detailsDialogWrapper" class="dialogWrapper">
+  <!-- enteredTag binds represents name of entered tag and it is binded to controller property value , closure callAddTag is triggered from component but executed in controller -->
+  {{purchase-dialog-component changeState=(action 'changePurchaseState') productName=productName quantity=quantity customerName=customerName address=address contact=contact state=state purchase=selectedPurchase}}
+</div>
+
+<!-- Set dialog overlay -->
+<div id="dialogOverlay" {{action 'closeDialog'}}></div>
+
+
+{{outlet}}

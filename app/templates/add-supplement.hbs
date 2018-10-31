@@ -1,0 +1,40 @@
+<div class="addEditContainer fade-in">
+
+  <!-- Page header -->
+  <div class="pageHeader">
+    <span>Add supplement</span>
+  </div>
+
+  <!-- Page container -->
+  <div class="addEditSupplementContainer">
+
+    <!-- Left side of the page -->
+    <div class="addEditSupplementLeftContainer">
+      <!-- Insert name component and give it value - '' when adding and some value when editing supplement -->
+      {{name-input-component name=enteredName}}
+      <br/>
+      <!-- Insert description component and give it value - '' when adding and some value when editing supplement -->
+      {{description-input-component description=enteredDescription}}
+    </div>
+
+    <!-- Right side of the page-->
+    <div class="addEditSupplementRightContainer">
+      <!-- Insert images upload component and set actionType to 'add' so that image preview div is empty -->
+      {{images-input-component actionType='add'}}
+      <br/>
+      <!-- Insert tags list component, set actionType to '' so that none of the tags is marked, selectedTags = [] -->
+      <p class="tagsListContainerHeading">*TAGS</p>
+      {{tags-list-component actionType='add' item=model selectedTags=selectedTagIds}}
+    </div>
+
+  </div>
+
+  <!-- Set page actions buttons -->
+  <div class="addEditButtons">
+    <p {{action 'goToSupplementsPage'}}>CANCEL</p>
+    <p {{action 'saveData'}}>SAVE</p>
+  </div>
+
+</div>
+
+{{outlet}}

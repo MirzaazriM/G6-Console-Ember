@@ -1,0 +1,29 @@
+<div id="productsPage" class="pageContainer fade-in">
+
+  <!-- Set page header -->
+  <div class="pageHeader">
+    <!-- Heading -->
+    <span>Supplements</span>
+    <!-- Search input -->
+    <div class="searchHolder">
+      <img src="assets/icons/magnify.svg"/>
+      <input id="supplementSearcher" onkeyup={{action 'searchSupplements'}} />
+    </div>
+  </div>
+
+  <div id="supplementsDataContainer">
+    <!-- Loop through supplements data -->
+    {{#each model as |supplement|}}
+      <!-- Set component data and current page for redirecting on right page after clicking edit icon -->
+      {{product-supplement-component item=supplement page='edit-supplement'}}
+    {{/each}}
+  </div>
+
+  <!-- Set paper fab button and set current page for redirecting on right page after clicking this button -->
+  <div>
+    {{paper-fab-component page='add-supplement' icon='plus'}}
+  </div>
+
+</div>
+
+{{outlet}}
